@@ -4,18 +4,44 @@ var width = window.innerWidth;
 var height = window.innerHeight;
 
 var stage = new Konva.Stage({
-  container: 'container',
-  width: width,
-  height: height,
+    container: 'container',
+    width: width,
+    height: height,
 });
 
 var layer = new Konva.Layer();
 
 stage.add(layer);
+var nr = Math.random()*10;
+//create enclosure loop
+for (var i = 0; i < nr*3; i++) {
+    
+    var ax = stage.width() * Math.random();
+    var ay = stage.height() * Math.random();
+      
+    enclosure = new Konva.Line({
+    
+    x: ax,
+      y: ay,
+    stroke: 'black',
+    strokeWidth: 10,
+    points: [ax*i, ay*i, ax*4*i, ay*2*i, ax*4*i, ay*6*i, ],
+    closed: true,
+    tension: 1,
+    draggable: true,
+  });
+
+  //    points: [Math.random()*200,Math.random()*200,Math.random()*400,Math.random()*200,Math.random()*400,Math.random()*400],       strokeWidth: 5,
+
+  // add the shape to the layer
+  layer.add(enclosure);
+
+
+
+};
 
 // making random amount of stars
 
-var nr = Math.random()*10;
 var couleurs = ["red","blue","yellow","green", "purple", "pink", "black", "yellowgreen", "grey", "lightblue", "magenta"];
 var star;
       for (var i = 0; i < nr; i++) {
@@ -85,6 +111,6 @@ var plus = new Konva.Line({
 
   // add the shape to the layer
   layer.add(plus);
-
+var enclosure;
     // add the layer to the stage
     stage.add(layer);
