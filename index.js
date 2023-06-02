@@ -106,36 +106,54 @@ var circle;
       console.log(stage.width());
       console.log(ax);
   
-for (var i = 0; i < 10; i++) {
- var couleur = 0;
-  couleur++;
-  if (couleur == 10){
-    couleur = 0
+      var couleur = 0;
+      console.log('hi'+Math.trunc(10*Math.random()))
+      
+      // making a variable so all bacteria are the same color but the color changes every refresh, making an integer small enough for array
+      var col1 = Math.trunc(10*Math.random());
+for (var i = 0; i < ax/10; i++) {
+//making sure colours loop so can see more than only array length n bacteria if want bacteria of all colours
+  console.log(couleur);
+ couleur ++;
+ console.log(couleur);
+ if (couleur == 10){
+    couleur = 0;
   }
+  var rand1 = Math.random();
+  var rand2 = Math.random();
+  var rand3 = Math.random();
+  var rand = Math.random();
     bacteria = new Konva.Line({
         x: stage.width() * Math.random(),
         y: stage.height() * Math.random(),
-        fill: couleurs[1],
-        points: [Math.random()*20,Math.random()*20,Math.random()*40,Math.random()*20,Math.random()*40,Math.random()*40],       strokeWidth: 5,
+        fill: couleurs[col1],
+        points: [rand, rand*15, rand*9, rand*5, rand*20, rand, rand*40, rand*5, rand*50, rand*20,rand*40, rand*30, rand*22, rand*24,rand*10, rand*26],       
+        rotation: Math.random()*360,
+        strokeWidth: 5,
         closed: true,
-        tension: 1,
+        tension: 0.5,
         draggable: true,
+        //bezier: true,
       });
     
       var a = 0;
       // add the shape to the layer
       layer.add(bacteria);
+
+      //colours change on click in a loop 
       bacteria.on('click', function(){
         a++;
         if (a == 10){
           a = 0
         }
-        var fill = this.fill() == couleurs[i] ? couleurs[a] : couleurs[i];
+        var fill = this.fill() == couleurs[couleur] ? couleurs[a] : couleurs[couleur];
         this.fill(fill);
       })
 
 }
 //        points: [Math.random()*20,Math.random()*20,Math.random()*40,Math.random()*20,Math.random()*40,Math.random()*40,Math.random()*20,Math.random()*40,],
+
+//trying to make them follow mouse
 
 
 //crate a plus
