@@ -28,7 +28,7 @@ var couleur = 0;
 //create enclosure loop
 var enclosure;
 
-for (var i = 0; i < ax/100; i++) {
+for (var i = 0; i < ax/200; i++) {
     //different place and shape every time
       var bihx = stage.width() * Math.random();
       var bihy = stage.width() * Math.random();
@@ -143,28 +143,34 @@ circle.on('click', function(){
   }
   
   
-//Making bacteria
-      var bacteria;
-      console.log(stage.width() * Math.random());
-      console.log(stage.width());
-      console.log(ax);
-  
-      console.log('hi'+Math.trunc(10*Math.random()))
-      
+  //function on btn click to populate
+  function bacteriaTakeover() {
     
-//var bacterias =new Konva.Group();
-
-for (var i = 0; i < ax/15; i++) {
-//making sure colours loop so can see more than only array length n bacteria if want bacteria of all colours
-  console.log(couleur);
- couleur ++;
- console.log(couleur);
- if (couleur == 10){
-    couleur = 0;
-  }
-  var rand = Math.random();
+      setInterval(function(){
+        makeBacteria();
+      }, 250);
+  };
   
-    bacteria = new Konva.Line({
+   
+  function populate(){
+
+    //Making bacteria
+
+
+    for (var i = 0; i < ax/60; i++) {
+     
+        makeBacteria();
+    
+  };
+  
+  };
+  //var bacterias =new Konva.Group();
+  function makeBacteria(){
+    
+    var bacteria;
+    var rand = Math.random();
+    //prompt('okay');
+  bacteria = new Konva.Line({
         x: stage.width() * Math.random(),
         y: stage.height() * Math.random(),
         fill: couleurs[col1],
@@ -180,9 +186,6 @@ for (var i = 0; i < ax/15; i++) {
       });
       
       var a = 0;
-      // add the shape to the layer
-      layer.add(bacteria);
-      
       //colours change on click in a loop 
       bacteria.on('click', function(){
         a++;
@@ -193,27 +196,32 @@ for (var i = 0; i < ax/15; i++) {
         this.fill(fill);
       })
       //bacterias.add(bacteria);
-      
-      
-    }
+   
+        // add the shape to the layer
+        layer.add(bacteria);
+        stage.add(layer);
+        
+};
+
     //        points: [Math.random()*20,Math.random()*20,Math.random()*40,Math.random()*20,Math.random()*40,Math.random()*40,Math.random()*20,Math.random()*40,],
     
   
     
 //create a plus
  var plus;
+ var acolor = Math.trunc(Math.random()*10);
+ 
 for(var i = 0; i < stage.width() * Math.random()/700; i++){
   couleur ++;
   if (couleur == 10){
      couleur = 0;
    }
-   
  plus = new Konva.Line({
   //0,9 so never outside frame
   x: stage.width() * Math.random()*0.9,
           y: stage.height() * Math.random()*0.8,
     points: [0,50,50,50,50,0,75,0,75,50,125,50,125,75,75,75,75,125,50,125,50,75,0,75, ],
-    fill: couleurs[couleur],
+    fill: couleurs[acolor],
     closed: true,
     draggable: true,
   });
@@ -232,34 +240,71 @@ for(var i = 0; i < stage.width() * Math.random()/700; i++){
   })
 }; 
 
-
-//create plus on double tap
-
-
- stage.on('click', function (){
+//create a wiggle
+var  wiggle;
+for(var i = 0; i < stage.width() * Math.random()/700; i++){
   couleur ++;
   if (couleur == 10){
      couleur = 0;
    }
-    
-   var pos = layer.getRelativePointerPosition();
+   var r = Math.random()*100;
 
-   var star = new Konva.Star({
-    x: pos.x,
-    y: pos.y,
-    fill: 'yellow',
-    numPoints: 4,   
-    innerRadius: 5+10*Math.random(),
-    outerRadius: 25*Math.random(),
+wiggle = new Konva.Line({
+  //0,9 so never outside frame
+  x: stage.width() * Math.random()*0.9,
+          y: stage.height() * Math.random()*0.8,
+    points:  [r, r, r*2,  r*2, r, r*3,r*2, r*4, r,  r*5, r*2, r*6,],
+    stroke: couleurs[couleur],
+    strokeWidth: Math.random()*30,
     draggable: true,
-    name: 'star ' + i,
-    
-    shadowColor: 'white',
-    shadowBlur: 10,
+    bezier: false,
+    tension: 0.45,
+    opacity: Math.random(),
   });
-  layer.add(star);
-}); 
 
+  // add the shape to the layer
+  layer.add( wiggle);
+  //colours change on click in a loop 
+  var a =0;
+  wiggle.on('click', function(){
+    a++;
+    if (a == 11){
+      a = 0
+    }
+    var fill = this.fill() == couleurs[a] ? couleurs[a+1] : couleurs[a];
+    this.fill(fill);
+  })
+}; 
 
-    // add the layer to the stage
-    stage.add(layer);
+//create star on click
+
+function starClicker(){
+  stage.on('click', function (){
+    couleur ++;
+    if (couleur == 10){
+       couleur = 0;
+     }
+      
+     var pos = layer.getRelativePointerPosition();
+   var rnd = Math.random();
+     var star = new Konva.Star({
+      x: pos.x,
+      y: pos.y,
+      fill: 'yellow',
+      numPoints: 4,   
+      innerRadius: 10*rnd,
+      outerRadius: 10+28*rnd,
+      draggable: true,
+      name: 'star ' + i,
+      
+      shadowColor: 'white',
+      shadowBlur: 10,
+    });
+    layer.add(star);
+  }); 
+  
+  
+      // add the layer to the stage
+      stage.add(layer);
+
+};
