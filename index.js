@@ -101,7 +101,7 @@ var circle;
         layer.add(circle);
     }
 //colours change on click in a loop 
-circle.on('click', function(){
+circle.on('click' , function(){
   a++;
   if (a == 11){
     a = 0
@@ -187,7 +187,7 @@ circle.on('click', function(){
       
       var a = 0;
       //colours change on click in a loop 
-      bacteria.on('click', function(){
+      bacteria.on('click tap', function(){
         a++;
         if (a == 11){
           a = 0
