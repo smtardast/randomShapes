@@ -271,9 +271,9 @@ wiggle = new Konva.Line({
     if (a == 11){
       a = 0
     }
-    var fill = this.fill() == couleurs[a] ? couleurs[a+1] : couleurs[a];
-    this.fill(fill);
-  })
+    var stroke = this.stroke() == couleurs[a] ? couleurs[a+1] : couleurs[a];
+    this.stroke(stroke);
+  });
 }; 
 
 //create star on click tap
