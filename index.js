@@ -141,7 +141,9 @@ circle.on('click', function(){
         this.fill(fill);
       })
   }
-    //Making bacteria
+  
+  
+//Making bacteria
       var bacteria;
       console.log(stage.width() * Math.random());
       console.log(stage.width());
@@ -234,7 +236,7 @@ for(var i = 0; i < stage.width() * Math.random()/700; i++){
 //create plus on double tap
 
 
-/* stage.on('click', function (){
+ stage.on('click', function (){
   couleur ++;
   if (couleur == 10){
      couleur = 0;
@@ -245,19 +247,18 @@ for(var i = 0; i < stage.width() * Math.random()/700; i++){
    var star = new Konva.Star({
     x: pos.x,
     y: pos.y,
-    fill: 'blue',
+    fill: 'yellow',
     numPoints: 4,   
-    innerRadius: 10*Math.random(),
+    innerRadius: 5+10*Math.random(),
     outerRadius: 25*Math.random(),
     draggable: true,
     name: 'star ' + i,
-    shadowOffsetX: 5,
-    shadowOffsetY: 5,
-    shadowColor: 'yellow',
-    shadowBlur: 0.5,
+    
+    shadowColor: 'white',
+    shadowBlur: 10,
   });
   layer.add(star);
-}); */
+}); 
 
 
     // add the layer to the stage
