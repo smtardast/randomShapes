@@ -100,8 +100,8 @@ var circle;
         });
         layer.add(circle);
     }
-//colours change on click in a loop 
-circle.on('click' , function(){
+//colours change on click tap in a loop 
+circle.on('click tap' , function(){
   a++;
   if (a == 11){
     a = 0
@@ -131,8 +131,8 @@ circle.on('click' , function(){
       layer.add(ring);
 
 
-      //colours change on click in a loop 
-      ring.on('click', function(){
+      //colours change on click tap in a loop 
+      ring.on('click tap', function(){
         a++;
         if (a == 11){
           a = 0
@@ -143,7 +143,7 @@ circle.on('click' , function(){
   }
   
   
-  //function on btn click to populate
+  //function on btn click tap to populate
   function bacteriaTakeover() {
     
       setInterval(function(){
@@ -186,8 +186,8 @@ circle.on('click' , function(){
       });
       
       var a = 0;
-      //colours change on click in a loop 
-      bacteria.on('click tap', function(){
+      //colours change on click tap in a loop 
+      bacteria.on('click tap ', function(){
         a++;
         if (a == 11){
           a = 0
@@ -228,9 +228,9 @@ for(var i = 0; i < stage.width() * Math.random()/700; i++){
 
   // add the shape to the layer
   layer.add(plus);
-  //colours change on click in a loop 
+  //colours change on click tap in a loop 
   var a =0;
-  plus.on('click', function(){
+  plus.on('click tap', function(){
     a++;
     if (a == 11){
       a = 0
@@ -264,9 +264,9 @@ wiggle = new Konva.Line({
 
   // add the shape to the layer
   layer.add( wiggle);
-  //colours change on click in a loop 
+  //colours change on click tap in a loop 
   var a =0;
-  wiggle.on('click', function(){
+  wiggle.on('click tap', function(){
     a++;
     if (a == 11){
       a = 0
@@ -276,10 +276,10 @@ wiggle = new Konva.Line({
   })
 }; 
 
-//create star on click
+//create star on click tap
 
-function starClicker(){
-  stage.on('click', function (){
+function starClick taper(){
+  stage.on('click tap', function (){
     couleur ++;
     if (couleur == 10){
        couleur = 0;
