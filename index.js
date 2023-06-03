@@ -150,6 +150,8 @@ circle.on('click', function(){
       console.log('hi'+Math.trunc(10*Math.random()))
       
     
+//var bacterias =new Konva.Group();
+
 for (var i = 0; i < ax/15; i++) {
 //making sure colours loop so can see more than only array length n bacteria if want bacteria of all colours
   console.log(couleur);
@@ -171,13 +173,14 @@ for (var i = 0; i < ax/15; i++) {
         tension: 0.5,
         draggable: true,
         opacity: Math.random(),
+        id: 'bacteria',
         //bezier: true,
       });
-    
+      
       var a = 0;
       // add the shape to the layer
       layer.add(bacteria);
-
+      
       //colours change on click in a loop 
       bacteria.on('click', function(){
         a++;
@@ -187,13 +190,14 @@ for (var i = 0; i < ax/15; i++) {
         var fill = this.fill() == couleurs[a] ? couleurs[a+1] : couleurs[a];
         this.fill(fill);
       })
-
-}
-//        points: [Math.random()*20,Math.random()*20,Math.random()*40,Math.random()*20,Math.random()*40,Math.random()*40,Math.random()*20,Math.random()*40,],
-
-//trying to make them follow mouse
-
-
+      //bacterias.add(bacteria);
+      
+      
+    }
+    //        points: [Math.random()*20,Math.random()*20,Math.random()*40,Math.random()*20,Math.random()*40,Math.random()*40,Math.random()*20,Math.random()*40,],
+    
+  
+    
 //create a plus
  var plus;
 for(var i = 0; i < stage.width() * Math.random()/700; i++){
@@ -225,6 +229,7 @@ for(var i = 0; i < stage.width() * Math.random()/700; i++){
     this.fill(fill);
   })
 }; 
+
 
 //create plus on double tap
 
