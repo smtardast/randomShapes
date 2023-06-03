@@ -5,14 +5,90 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/konva@9/konva.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
-    <h1>Reza Tardast</h1>
-    <button onclick="populate()">populate me</button>
-    <button onclick="bacteriaTakeover()">takeover</button>
-    <button onclick="starClicker()">starClicker</button>
+    
+    
+    <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <ul class="nav nav-tabs justify-content-center" id="myTab">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="landscapes-tab" data-bs-toggle="tab" data-bs-target="#landscapes-tab-pane" type="button" role="tab" aria-controls="landscapes-tab-pane" aria-selected="true">landscapes</button>
+                </li> 
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="shapes-tab" data-bs-toggle="tab" data-bs-target="#shapes-tab-pane" type="button" role="tab" aria-controls="shapes-tab-pane" aria-selected="false">shapes</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link " id="colours-tab" data-bs-toggle="tab" data-bs-target="#colours-tab-pane" type="button" role="tab" aria-controls="colours-tab-pane" aria-selected="false">colours</button>
+                  </li>
+             
+              </ul>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+  <div class="offcanvas-body">
+      
+    
+      
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="landscapes-tab-pane" role="tabpanel" aria-labelledby="landscapes-tab" tabindex="0">landscapes</div>
+        <div class="tab-pane fade" id="shapes-tab-pane" role="tabpanel" aria-labelledby="shapes-tab" tabindex="0">shapes
+            (.row.shaperows#row$>(.col-6.shapecos#col$>.shape$.shape#shape$)*2)*4µ
+        </div>
+        <div class="tab-pane fade " id="colours-tab-pane" role="tabpanel" aria-labelledby="colours-tab" tabindex="0">colours</div>
+      </div>    
+    </div>
+</div>
+
+    
     <div id="container"></div>
-<script src="index.js"></script>
+    <nav class="navbar navbar-expand-lg sticky-bottom bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Reza Tardast</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">what am i?</button>
+                </a>
+              </li>
+              <li class="nav-item">
+                  <button onclick="bacteriaTakeover()">takeover</button>
+    
+              </li>
+              <li class="nav-item">
+                  <button onclick="populate()">populate me</button>
+    
+              </li>
+              <li class="nav-item">
+    
+              </li>
+              <li class="nav-item">
+    <button onclick="starClicker()">starClicker</button>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Link
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled">Link</a>
+              </li>
+            </ul>
+           
+          </div>
+        </div>
+      </nav>
+    <script src="index.js"></script>
 </body>
 </html>

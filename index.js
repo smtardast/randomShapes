@@ -303,8 +303,13 @@ function starClicker(){
     layer.add(star);
   }); 
   
+
+
+
+
   
       // add the layer to the stage
       stage.add(layer);
 
 };
+
