@@ -278,7 +278,7 @@ wiggle = new Konva.Line({
 
 //create star on click tap
 
-function starClick taper(){
+function starClicker(){
   stage.on('click tap', function (){
     couleur ++;
     if (couleur == 10){
