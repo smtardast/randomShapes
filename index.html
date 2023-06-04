@@ -16,87 +16,132 @@
     <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
         <div class="offcanvas-header">
             <ul class="nav nav-tabs justify-content-center" id="myTab">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="landscapes-tab" data-bs-toggle="tab" data-bs-target="#landscapes-tab-pane" type="button" role="tab" aria-controls="landscapes-tab-pane" aria-selected="true">landscapes</button>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="how-tab" data-bs-toggle="tab" data-bs-target="#how-tab-pane" type="button" role="tab" aria-controls="how-tab-pane" aria-selected="true" style="padding: 5px">how</button>
+            </li>  
+              <li class="nav-item" role="presentation">
+                    <button class="nav-link " id="landscapes-tab" data-bs-toggle="tab" data-bs-target="#landscapes-tab-pane" type="button" role="tab" aria-controls="landscapes-tab-pane" aria-selected="false" style="padding: 5px">landscapes</button>
                 </li> 
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="shapes-tab" data-bs-toggle="tab" data-bs-target="#shapes-tab-pane" type="button" role="tab" aria-controls="shapes-tab-pane" aria-selected="false">shapes</button>
+                    <button class="nav-link" id="shapes-tab" data-bs-toggle="tab" data-bs-target="#shapes-tab-pane" type="button" role="tab" aria-controls="shapes-tab-pane" aria-selected="false" style="padding: 5px">shapes</button>
                 </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link " id="colours-tab" data-bs-toggle="tab" data-bs-target="#colours-tab-pane" type="button" role="tab" aria-controls="colours-tab-pane" aria-selected="false">colours</button>
+                <li class="nav-item " role="presentation">
+                    <button class="nav-link " id="colours-tab" data-bs-toggle="tab" data-bs-target="#colours-tab-pane" type="button" role="tab" aria-controls="colours-tab-pane" aria-selected="false" style="padding:5px">colours</button>
                   </li>
              
               </ul>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-body ">
       
     
       
     <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active" id="landscapes-tab-pane" role="tabpanel" aria-labelledby="landscapes-tab" tabindex="0">landscapes</div>
-        <div class="tab-pane fade  text-center" id="shapes-tab-pane" role="tabpanel" aria-labelledby="shapes-tab" tabindex="0">
-            <div class="row shaperows" id="row1">
-                <div class="col-6 shapecols pt-5 " id="col1">
-                    <div class="shape1 shape" id="shape1"><img src="img/circle.png" alt=""></div>
+      <div class="tab-pane fade show active" id="how-tab-pane" role="tabpanel" aria-labelledby="how-tab" tabindex="0">
+        <p>
+          A landscape is randomly generated every time you refresh the page. <br><br>
+          Like a gardener you can tend to this landscape and alter it.<br> Drag the constituents around and drop them wherever on the screen. Change their colour by clicking on them. 
+<br> <br>
+ Add light by clicking on the star button then clicking on the screen.  With the blabla button, add some living beings. Withe the takeover button, let them invade your landscape one by one.
+
+
+        </p>
+      </div>  
+      <div class="tab-pane fade  " id="landscapes-tab-pane" role="tabpanel" aria-labelledby="landscapes-tab" tabindex="0">
+          
+          <p>There is something peculiar about landscapes.  When does a place become a landscape?<br><br>
+            
+            Landscapes are a place greater than itself. A place becomes a landscape when you experience it as a whole, not just objects next to each other. Its existance is dependant on the internal experience of the perceiver. 
+            <br> <br>
+            This is a tool to travel internally. These landscapes are built without the external objects that constitute a place, leaving the spectators to construct the landscape within. <br> <br>
+            The shapes and colours are shorthand for perceptual information, and are somatized. They contain the physical experience, the emotion and the memories perceptual information triggers without referring to a strict external object. Thus, they do not illustrate objects through resemblance, but through the internal experience of the object. You can find their meanings in the following tabs.
+             <br><br>
+               Landscapes are also how light plays with the objects of the place, and what lives within it. These make a landscape come alive, and give it a concept of time. I leave these notions of time and narrative up to the viewer. I let the perceiver play god and have control over their landscape.
+            </p>
+
+
+        </div>
+        <div class="tab-pane fade align-content-center text-center" id="shapes-tab-pane" role="tabpanel" aria-labelledby="shapes-tab" tabindex="0">
+            <div class="row shaperows p-5  text-center" id="row1">
+                <div class=" shapecols  pt-4 " id="col1">
+                    <div class="shape1 shape text-center" id="shape1"><img src="img/circle.png" alt=""></div>
                 </div>
-                <div class="col-6 shapecols  align-content-center" id="col2">
-                <H2>pause</H2>
-                <p> Hold your breath, listen. Sharpen your ears, stiffen yourself. You're not scared, you're aware.</p>
+                <div class=" shapecols  align-content-center" id="col2">
+                  
+                <H2>still</H2>
+                <p>Circles are whole unified bodies of something static</p>
+                <p> Pause. Hold your breath, listen. You're full in yourself. And your're still.</p>
+                <p>Ex: a mountain, a lake</p>
                 </div>
               </div>
-              <div class="row shaperows" id="row2">
-                <div class="col-6 shapecols pt-4" id="col1">
+              <div class="row shaperows p-5 text-center" id="row2">
+                <div class=" shapecols pt-4" id="col1">
                   <div class="shape2 shape align-content-center align-content-center" id="shape2"><img src="img/ring.png" alt="" class="shapeimg align-content-center"></div>
                 </div>
-                <div class="col-6 shapecols" id="col2">
-                  <h2>respiration</h2>
-                  <p>Breathe in, feel yourself swell with the world. Breathe out, create space. You exist to feed plants.</p>
+                <div class=" shapecols" id="col2">
+                  <h2>movement</h2>
+                  <p>Rings are spaces in movement. Spaces that grow, get smaller, travel. </p>
+                  <p> Breathe in, feel yourself swell with the world. Breathe out, create space.  You exist to feed plants.</p>
+                  <p>Ex: a dune, tides and waves in the sea</p>
                 </div>
               </div>
-              <div class="row shaperows" id="row3">
-                <div class="col-6 shapecols pt-4" id="col1">
+              <div class="row shaperows p-5 text-center" id="row3">
+                <div class=" shapecols pt-4" id="col1">
                   <div class="shape1 shape align-content-center" id="shape1"><img src="img/plus.png" alt="" class="shapeimg align-content-center"></div>
                 </div>
-                <div class="col-6 shapecols" id="col2">
-                  <h2>focus</h2>
-                  <p>Precision. Your eyes sharp on the target. I give you walls and structure. I am the bricks of your house, your spine and pelvis. </p>
+                <div class=" shapecols" id="col2">
+                  <h2>precision</h2>
+                  <p>Pluses are constructions through focused efforts. </p>
+                  <p>Focus . Your eyes sharp on the target.  Sharpen your ears, stiffen yourself. You're not scared, you're aware. I give you walls and structure. I am the bricks of your house, your spine and pelvis. </p>
+                  <p>Ex: a house, a nest</p>
                 </div>
               </div>
-              <div class="row shaperows" id="row4">
-                <div class="col-6 shapecols pt-4" id="col1">
-                  <div class="shape2 shape align-content-center" id="shape2"><img src="img/star.png" alt="" class="shapeimg align-content-center"></div>
-                </div>
-                <div class="col-6 shapecols" id="col2">
-                  <h2>blink</h2>
-                  <p>That springle of joy twinkling in you. The happy dance when you eat something yummy, the laughter.</p>
-                </div>
-              </div>
-              <div class="row shaperows" id="row4">
-                <div class="col-6 shapecols pt-4" id="col1">
+              
+              <div class="row shaperows p-5 text-center" id="row4">
+                <div class=" shapecols pt-4" id="col1">
                   <div class="shape1  shape align-content-center " id="wiggle"><img src="img/wiggle.png" id="" alt="" class="shapeimg align-content-center wiggle "></div>
                 </div>
-                <div class="col-6 shapecols" id="col2">
-                  <h2>wiggle</h2>
-                  <p>The rythm of you. Your hips swaying, gravity and force moving your spine vertebrae by vertebrae.</p>
+                <div class=" shapecols" id="col2">
+                  <h2>ways</h2>
+                  <p>The ways the world finds to move forwards in its own rythm, on its own terms. </p>
+                  <p>Wiggle in the rythm of you. You have a direction. Your hips swaying, gravity and force moving your spine vertebrae by vertebrae. Walk, run, whine.</p>
+                  <p>Ex:a path, the lazy turns of a river</p>
                 </div>
               </div>
-              <div class="row shaperows" id="row4">
-                <div class="col-6 shapecols pt-4" id="col1">
+              <div class="row shaperows p-5 text-center" id="row4">
+                <div class=" shapecols pt-4" id="col1">
                   <div class="shape2 shape align-content-center" id="shape2"><img src="img/delimitation.png" alt="" class="shapeimg align-content-center"></div>
                 </div>
-                <div class="col-6 shapecols" id="col2">
-                  <h2>limites</h2>
-                  <p>Holding you, blocking you. Limits to exist within, space defining our relationship to others. Defined in relation to her.</p>
+                <div class=" shapecols" id="col2">
+                  <h2>delimitations</h2>
+                  <p>  The unifiers and limits of space. 
+                  </p>
+                  <p>Limits holding you, and blocking you. Limits to exist within, space defining our relationship to others. Everything is defined in relation to her. Your skin.</p>
+                  <p>Ex: where the sand meets the sea</p>
                 </div>
               </div>
-              <div class="row shaperows" id="row4">
-                <div class="col-6 shapecols pt-4" id="col1">
+
+              <div class="row shaperows p-5 text-center" id="row4">
+                <div class=" shapecols pt-4" id="col1">
+                  <div class="shape2 shape align-content-center" id="shape2"><img src="img/star.png" alt="" class="shapeimg align-content-center"></div>
+                </div>
+                <div class=" shapecols" id="col2">
+                  <h2>light</h2>
+                  <p>Stars are light dancing on objects.</p>
+                  <p>Blink. That springle of joy twinkling in you. The happy dance when you eat something yummy, the laughter, the shiver of pleasure.</p>
+                  <p>Ex: sun through the leaves, glimmer on the sea </p>
+                </div>
+              </div>
+
+              <div class="row shaperows p-5 text-center" id="row4">
+                <div class=" shapecols pt-4" id="col1">
                   <div class="shape1 shape align-content-center" id="shape1"><img src="img/bacteria.png" alt="" class="shapeimg align-content-center"></div>
                 </div>
-                <div class="col-6 shapecols" id="col2">
-                  <h2>cellf</h2>
-                  <p>populating, never alone. The bacteria growing everywhere, the courageous ones who built everything you are, the world is. self/other. me/us/we. discovering, exploringThe purest individual, the cingle cell but who  always organises together</p>
+                <div class=" shapecols" id="col2">
+                  <h2>population</h2>
+                  <p>The purest individual, the single cell. Who  always organises together, in relation to the other. The courageous ones who built everything living in the world, including you. </p>
+                  <p>The relation between the self/other. The me/us/we. Discovering, exploring, growing and building.</p>
+                  <p>Ex: a bacteria, a tree, you</p>
                 </div>
               </div>
             </div>
@@ -105,48 +150,40 @@
         </div>
 </div>
 
+<!-- my navbar -->
     
     <div id="container"></div>
-    <nav class="navbar navbar-expand-lg sticky-bottom bg-body-tertiary">
+    <nav class="navbar navbar-expand-md sticky-bottom bg-body-tertiary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Reza Tardast</a>
+         
+          <ul class="navbar-nav ">
+
+            <li class="nav-item">
+              <a class="nav-link  " type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">what is this?
+              </a>
+            </li>
+          </ul>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarScroll">
-            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll align-content-center" style="--bs-scroll-height: 100px;">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">      <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">what am i?</button>
-                </a>
-              </li>
+                <a class="nav-link  " type="button" onclick="starClicker()">add stars by clicking on the screen</a>
+                          </li>
+             
               <li class="nav-item">
-                  <button onclick="bacteriaTakeover()">takeover</button>
+                  <a class="nav-link  " type="button" onclick="populate()">populate with cells</a>
     
               </li>
               <li class="nav-item">
-                  <button onclick="populate()">populate me</button>
-    
-              </li>
-              <li class="nav-item">
-    
-              </li>
-              <li class="nav-item">
-    <button onclick="starClicker()">starClicker</button>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Link
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled">Link</a>
-              </li>
+                <a class="nav-link  " type="button" onclick="bacteriaTakeover()">make cells take over!</a>
+  
+            </li>
+            
+              
+              
             </ul>
            
           </div>

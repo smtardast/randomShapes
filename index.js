@@ -80,47 +80,51 @@ for (var i = 0; i < ax/200; i++) {
 //making random amounts of circles
 
 var circle;
-      for (var i = 0; i < stage.width() * Math.random()/300; i++) {
-        
-        couleur ++;
+      for (var i = 0; i < stage.height() * Math.random()/200; i++) {
+        var coco = Math.trunc(Math.random()*10);
+
+   /*      couleur ++;
         console.log(couleur);
         if (couleur == 10){
            couleur = 0;
-         }
+         } */
         
         circle = new Konva.Circle({
           x: stage.width() * Math.random(),
           y: stage.height() * Math.random(),
-          fill: couleurs[couleur],
-          radius: (stage.width() * Math.random())/10,
+          fill: couleurs[coco],
+          radius: (stage.height() * Math.random())/5,
           draggable: true,
           name: 'circle ' + i,
           opacity: Math.random(),
 
         });
         layer.add(circle);
-    }
-//colours change on click tap in a loop 
-circle.on('click tap' , function(){
-  a++;
-  if (a == 11){
-    a = 0
-  }
-  var fill = this.fill() == couleurs[a] ? couleurs[a+1] : couleurs[a];
-  this.fill(fill);
-});
+        //colours change on click tap in a loop 
+        var a;  
+        circle.on('click tap' , function(){
+          a++;
+          if (a == 11){
+            a = 0
+          }
+          var fill = this.fill() == couleurs[a] ? couleurs[a+1] : couleurs[a];
+          this.fill(fill);
+        });
+ }
 
 
     // making randow amounts of rings
 
     var ring;
-    for (var i = 0; i < stage.width() * Math.random()/300; i++) {
+    for (var i = 0; i < stage.height() * Math.random()/300; i++) {
       var ringRad = (stage.width() * Math.random());
-
+      
+      var coco = Math.trunc(Math.random()*10);
       ring = new Konva.Ring({
+
         x: stage.width() * Math.random(),
         y: stage.height() * Math.random(),
-        fill: couleurs[i],
+        fill: couleurs[coco],
         innerRadius:  ringRad/18,
         outerRadius: ringRad/10,
         draggable: true,
