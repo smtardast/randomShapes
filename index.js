@@ -1,7 +1,7 @@
 //setting up the basics
 
 var width = window.innerWidth;
-var height = window.innerHeight;
+var height = (window.innerHeight-60);
 
 var stage = new Konva.Stage({
     container: 'container',
