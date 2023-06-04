@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="style.css">    
 <title>Document</title>
 </head>
-<body>
+<body onload="linkcolor() ">
     
     
     <div class="offcanvas offcanvas-end" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
@@ -166,17 +166,19 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarScroll">
-              <ul class="  navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll align-content-center" style="--bs-scroll-height: 100px;">
-              <li class="nav-item">
-                <a class="nav-link  " type="button" onclick="starClicker()">add stars by clicking on the screen</a>
+              <ul class="  
+
+              navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll align-content-center" style="--bs-scroll-height: 100px;">
+              <li class="nav-item ">
+                <a class="nav-link  actions  "id="" type="button" onclick="starClicker()">add stars by clicking on the screen</a>
                           </li>
              
-              <li class="nav-item">
-                  <a class="nav-link  " type="button" onclick="populate()">populate with cells</a>
+              <li class="nav-item ">
+                  <a class="nav-link  actions " id=""type="button" onclick="populate()">populate with cells</a>
     
               </li>
-              <li class="nav-item">
-                <a class="nav-link  " type="button" onclick="bacteriaTakeover()">make cells take over!</a>
+              <li class="nav-item ">
+                <a class="nav-link  actions " id=""type="button" onclick="bacteriaTakeover()">make cells take over!</a>
   
             </li>
             

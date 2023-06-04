@@ -317,3 +317,7 @@ function starClicker(){
 
 };
 
+/* function linkcolor() {
+  var actions = document.getElementsByClassName('actions');
+  actions.style.color = "blue";}
+ */
