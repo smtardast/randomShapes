@@ -22,7 +22,8 @@ var wide = stage.width() ;
   var col1 = Math.trunc(10*Math.random());
 
 //console.log("ax"+ax+"  ay"+ay);
-var couleurs = ["red","blue","yellow","green", "purple", "pink", "black", "yellowgreen", "grey", "lightblue", "magenta"];
+    
+    var couleurs = ['#FF8B00','#C9000C','#0045a0','#89210D', '#156744', '#DD57FF', '#D9E51D', '#F2FF20', '#76C7D0', '#5F6C7A', '#54493D', '#AC823C'];
 var couleur = 0;
 
 //create enclosure loop
@@ -104,7 +105,7 @@ var circle;
         var a;  
         circle.on('click tap' , function(){
           a++;
-          if (a == 11){
+          if (a == 12){
             a = 0
           }
           var fill = this.fill() == couleurs[a] ? couleurs[a+1] : couleurs[a];
@@ -138,7 +139,7 @@ var circle;
       //colours change on click tap in a loop 
       ring.on('click tap', function(){
         a++;
-        if (a == 11){
+        if (a == 12){
           a = 0
         }
         var fill = this.fill() == couleurs[a] ? couleurs[a+1] : couleurs[a];
@@ -193,7 +194,7 @@ var circle;
       //colours change on click tap in a loop 
       bacteria.on('click tap ', function(){
         a++;
-        if (a == 11){
+        if (a == 12){
           a = 0
         }
         var fill = this.fill() == couleurs[a] ? couleurs[a+1] : couleurs[a];
@@ -217,7 +218,7 @@ var circle;
  
 for(var i = 0; i < stage.width() * Math.random()/700; i++){
   couleur ++;
-  if (couleur == 10){
+  if (couleur == 12){
      couleur = 0;
    }
  plus = new Konva.Line({
@@ -236,7 +237,7 @@ for(var i = 0; i < stage.width() * Math.random()/700; i++){
   var a =0;
   plus.on('click tap', function(){
     a++;
-    if (a == 11){
+    if (a == 12){
       a = 0
     }
     var fill = this.fill() == couleurs[a] ? couleurs[a+1] : couleurs[a];
@@ -248,7 +249,7 @@ for(var i = 0; i < stage.width() * Math.random()/700; i++){
 var  wiggle;
 for(var i = 0; i < stage.width() * Math.random()/700; i++){
   couleur ++;
-  if (couleur == 10){
+  if (couleur == 12){
      couleur = 0;
    }
    var r = Math.random()*100;
@@ -272,7 +273,7 @@ wiggle = new Konva.Line({
   var a =0;
   wiggle.on('click tap', function(){
     a++;
-    if (a == 11){
+    if (a == 12){
       a = 0
     }
     var stroke = this.stroke() == couleurs[a] ? couleurs[a+1] : couleurs[a];
@@ -285,7 +286,7 @@ wiggle = new Konva.Line({
 function starClicker(){
   stage.on('click tap', function (){
     couleur ++;
-    if (couleur == 10){
+    if (couleur == 12){
        couleur = 0;
      }
       
