@@ -23,7 +23,7 @@ var wide = stage.width() ;
 
 //console.log("ax"+ax+"  ay"+ay);
     
-    var couleurs = ['#ff0011','#C9000C','#0d00bd','#89210D', 'green', '#ff4fe3', '#D9E51D', '#F2FF20', '#74acb3', '#5F6C7A', '#54493D', '#c4a064'];
+    var couleurs = ['#ff0011','#C9000C','#26619c ','#99260f', 'green', '#ff4fe3', '#D9E51D', '#F2FF20', '#a6e1e9', '#a6b6c5', '#54493D', '#c4a064'];
 var couleur = 0;
 
 //create enclosure loop
